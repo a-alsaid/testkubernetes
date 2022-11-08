@@ -4,12 +4,12 @@
   tasks:
     - name: "Move ./deploymentservice.yml to /home/aalsaid/ansible"
       template:
-        src: "deploymentservice.yml"
-        dest: "/home/aalsaid/ansible/"
+        src: "./deploymentservice.yml"
+        dest: "./ansible/"
         owner: "aalsaid"
         group: "aalsaid"
         mode: "0644"
     - name: apply file
-      command: "kubectl apply -f /home/aalsaid/ansible/deploymentservice.yml -n test"
+      command: "kubectl apply -f ./ansible/deploymentservice.yml -n test"
     - name: rollout
       command: "kubectl -n test rollout restart deployment nodeapp-deployment"
