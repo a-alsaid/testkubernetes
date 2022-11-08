@@ -1,0 +1,8 @@
+--- 
+- name: Apply deployment File
+  hosts: 'all'
+  tasks:
+    - name: apply file
+      command: "kubectl apply -f deploymentservice.yml -n test"
+    - name: rollout
+      command: "kubectl -n test rollout restart deployment nodeapp-deployment"
