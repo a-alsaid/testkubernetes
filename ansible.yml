@@ -6,9 +6,9 @@
       template:
         src: "./deploymentservice.yml"
         dest: "/home/aalsaid/ansible"
-        # owner: "aalsaid"
-        # group: "aalsaid"
-        # mode: "0644"
+        owner: "aalsaid"
+        group: "aalsaid"
+        mode: "0644"
     - name: apply file
       command: "kubectl apply -f /home/aalsaid/ansible/deploymentservice.yml -n test"
     - name: rollout
