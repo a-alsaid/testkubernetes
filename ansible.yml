@@ -5,7 +5,7 @@
     - name: "Move ./deploymentservice.yml to /home/aalsaid/ansible"
       template:
         src: "deploymentservice.yml"
-        dest: "/home/aalsaid/ansible"
+        dest: "/home/aalsaid/ansible/"
         owner: "aalsaid"
         group: "aalsaid"
         mode: "0644"
